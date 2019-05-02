@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        registerReceiver(this.receiver, this.itf)
+    }
+
+    override fun onPause() {
+        super.onPause()
         unregisterReceiver(this.receiver)
     }
 

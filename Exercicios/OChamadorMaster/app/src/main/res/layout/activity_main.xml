@@ -9,48 +9,41 @@
         tools:context=".MainActivity">
 
     <Button
-            android:id="@+id/btHTML"
-            android:text="HTML"
+            android:id="@+id/btHtml"
+            android:text="html"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <Button
             android:id="@+id/btDiscar"
-            android:text="Discar"
+            android:text="discar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-
     <Button
             android:id="@+id/btLigar"
-            android:text="Ligar"
+            android:text="ligar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
     <Button
-            android:id="@+id/btSMS"
+            android:id="@+id/btEmail"
+            android:text="email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btSms"
             android:text="SMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-    <Button
-            android:id="@+id/btEmail"
-            android:text="E-mail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
     <Button
             android:id="@+id/btCompartilharTexto"
             android:text="Compartilhar Texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
     <Button
             android:id="@+id/btPonto"
             android:text="Ponto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
     <Button
             android:id="@+id/btRota"
             android:text="Rota"

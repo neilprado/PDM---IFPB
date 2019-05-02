@@ -17,30 +17,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
         this.etLogin = findViewById(R.id.etLogin)
         this.etSenha = findViewById(R.id.etSenha)
         this.btOk = findViewById(R.id.btOk)
         this.btCancelar = findViewById(R.id.btCancelar)
 
-        this.btCancelar.setOnClickListener({cancelar(it)})
-        this.btOk.setOnClickListener({logar(it)})
-        setContentView(R.layout.activity_main)
+        this.btOk.setOnClickListener({ salvar(it) })
+        this.btCancelar.setOnClickListener({ cancelar(it) })
     }
 
-    fun cancelar(view: View){
-        finish()
-    }
+    public fun salvar(view: View){
+        val login = this.etLogin.text.toString()
+        val senha = this.etSenha.text.toString()
 
-    fun logar(view: View){
-        var login = this.etLogin.text.toString()
-        var senha = this.etSenha.text.toString()
-        if(login.equals("admin") && senha.equals("123456")){
+        if (login.equals("ADMIN", true) && senha.equals("123456")){
             val it = Intent()
             it.putExtra("LOGIN", login)
             setResult(Activity.RESULT_OK, it)
             finish()
         }else{
-            Toast.makeText(this, "Login não autorizado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Login e/ou senha inválido(s)", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    public fun cancelar(view: View){
+        finish()
     }
 }
